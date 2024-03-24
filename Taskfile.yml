@@ -5,7 +5,10 @@ tasks:
   judge:
     cmds:
       - podman machine start
+      # - docker-compose up -d db redis
+      - sleep 10s
       - podman compose up -d
+      - sleep 5s
 
   podman:
     cmds:
@@ -23,3 +26,6 @@ tasks:
     cmds:
       - podman stop --all
     
+  frontend:
+    cmds:
+      - npm run dev
