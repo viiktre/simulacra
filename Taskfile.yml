@@ -1,0 +1,7 @@
+version: '3'
+
+# usage: task judge
+tasks:
+  judge:
+    cmds:
+      - docker-compose up -d
