@@ -4,4 +4,22 @@ version: '3'
 tasks:
   judge:
     cmds:
-      - docker-compose up -d
+      - podman machine start
+      - podman compose up -d
+
+  podman:
+    cmds:
+      - podman machine start
+
+  shutdown:
+    - podman machine stop
+    # - wsl --shutdown
+  
+  pods:
+    cmds:
+      - podman ps
+
+  pstop:
+    cmds:
+      - podman stop --all
+    

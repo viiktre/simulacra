@@ -9,7 +9,6 @@ x-logging:
 
 services:
   server:
-    container_name: judge
     image: judge0/judge0:1.13.0
     volumes:
       - ./judge0.conf:/judge0.conf:ro
